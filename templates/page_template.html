@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="../css/page_style.css">
+</head>
+<body>
+    <header>
+        <h1>{{ title }}</h1>
+        <nav>
+            {% for link in navigation %}
+            <a href="{{ link.url }}">{{ link.title }}</a>
+            {% endfor %}
+        </nav>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <p>&copy; {{ year }} {{ site_name }}. All rights reserved.</p>
+    </footer>
+</body>
+</html>
